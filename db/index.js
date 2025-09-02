@@ -80,6 +80,15 @@ const bandas = { lista:
         cover: 'images/soja.jpg',
         id: 10,
         video: "https://www.youtube.com/watch?v=XqgWJ_yaU7E"
+    },{
+
+        nombre: "Tussiwarriors",
+        integrantes: 3,
+        genero: "Rap",
+        topCanciones:[ "Willy Wonka","Pipu Pipu","Todo Maldito"],
+        cover: 'images/tussi.jpg',
+        id: 11,
+        video: "https://www.youtube.com/watch?v=wM6SCAg0mFE"
     }
 ]
 };
