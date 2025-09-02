@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detalle - <%= banda.nombre %></title>
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
     
     <h1>Detalle de bandas</h1>
     <img src="/<%= banda.cover %>" alt="Imagen de <%= banda.nombre %>">
-    <p>Nombre: <%= banda.nombre %></p>
-    <p>Genero: <%= banda.genero %></p>
-    <p>Integrantes: <%= banda.integrantes %></p>
-    <p>Top canciones:</p>
+    
+    <p><strong>ID:</strong> <%= banda.id %></p>
+    <p><strong>Nombre:</strong> <%= banda.nombre %></p>
+    <p><strong>Género:</strong> <%= banda.genero %></p>
+    <p><strong>Integrantes:</strong> <%= banda.integrantes %></p>
+    
+    <p><strong>Top canciones:</strong></p>
     <ul>
         <% for (let i = 0; i < banda.topCanciones.length; i++) { %>
             <li><%= banda.topCanciones[i] %></li>
         <% } %>
     </ul>
+
+    <p><strong>Video destacado:</strong></p>
+    <iframe width="560" height="315" 
+        src="<%= banda.video.replace('watch?v=', 'embed/') %>" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+
 </body>
 </html>
