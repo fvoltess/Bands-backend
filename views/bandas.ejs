@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de bandas</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <h1>Página de Bandas</h1>
+    <ul>
+        <% for (let index = 0; index < listadoBandas.length; index++) { %>
+            <li>
+                <a href="/bandas/id/<%= listadoBandas[index].id %>">
+                    <%= listadoBandas[index].nombre %>
+                </a>
+                - <%= listadoBandas[index].genero %>
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>
